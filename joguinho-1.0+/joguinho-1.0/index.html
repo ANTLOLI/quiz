@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="index.js" async></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+  <title>Numbers Battle Quiz</title>
+  <link rel="icon" type="image/x-icon" href="icone.PNG">
+</head>
+<body>
+  <div class="container">
+    <div class="questions-container hide">
+      <span class="question">Pergunta aqui?</span>
+      <div class="answers-container">
+        <button class="answer button">Resposta 1</button>
+        <button class="answer button">Resposta 2</button>
+        <button class="answer button">Resposta 3</button>
+        <button class="answer button">Resposta 4</button>
+      </div>
+    </div>
+    <div class="controls-container">
+      <button class="start-quiz button">Start</button>
+      <button class="next-question button hide">Próxima pergunta</button>
+    </div>
+  </div>
+
+
+  <audio id="audio" controls style="display: none;"></audio>
+
+  <div class="musicaDeFundo">
+    <audio id="musicaFundo" src="audio/testemusica.mp3" preload="auto" loop="true" autoplay></audio>
+    <button onclick="playAudio2()" type="button" >🔈</button>
+    <button onclick="pauseAudio()" type="button" >🔇</button>
+</div>
+
+  <audio id="acerto" src="audio/correto.mp3" preload="auto"></audio>
+
+  <audio id="erro" src="audio/erro.mp3" preload="auto"></audio>
+</body>
+<!--Códio base: https://www.youtube.com/watch?v=IV34pOplBsY
+Agradecimentos: Wevelley Morais-->
+
+<script>
+  function playAudio2() { 
+  document.getElementById("musicaFundo").play(); 
+  musicaFundo.volume=0.2;
+}
+
+function pauseAudio() { 
+  document.getElementById("musicaFundo").pause(); 
+}
+
+function playAcerto(){
+  document.getElementById("acerto").play();
+}
+
+function playErro(){
+  document.getElementById("erro").play();
+}
+</script>
+</html>
+

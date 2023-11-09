@@ -1,0 +1,196 @@
+/* Define estilos padrão para a página */
+
+* {
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  margin: 0;  /* Remove a margem padrão de todos os elementos */
+  box-sizing: border-box; /* A propriedade box-sizing define como a largura e a altura de um elemento são calculadas: se elas devem incluir preenchimento e bordas ou não. */
+}
+
+/* Define estilos para todos os botões */
+
+button {
+  cursor: pointer; /* Define o cursor como uma mãozinha ao passar sobre os botões */
+}
+
+
+body {
+  background-image: url(fundo.gif);/*define imagem de fundo*/
+  background-repeat: no-repeat;/*A imagem não irá se repetir*/
+  background-size:cover ;/*A imagem cobre toda a página*/
+  background-position:center center ;/*Coloca a imagem no centro da página*/
+  color: #fff; /* Define a cor dos elementos de texto como branca */
+  height: 100vh; /* Define a altura da página como 100% da altura da tela */
+  display: flex; /* Faz com que todos os elementos flexíveis tenham o mesmo comprimento, independentemente do seu conteúdo */
+  justify-content: center; /* Centraliza os elementos horizontalmente */
+  align-items: center; /* Centraliza os elementos verticalmente */
+}
+
+/* Define estilos para o contêiner principal */
+
+.container {
+  background-color: #121214; /* Define a cor de fundo da div principal */
+  width: 90%; /* Define a largura da div como 90% da largura total */
+  max-width: 800px; /* Define a largura máxima que a div pode atingir */
+
+  border: 2px solid #e1e1e6; /* Define uma borda para a div */
+  border-radius: 6px; /* Deixa a div com cantos arredondados */
+  padding: 16px; /* Adiciona espaço ao redor do conteúdo da div */
+  box-shadow: 0 0 2px 2px; /* Adiciona uma sombra à borda da div */
+
+  display: flex; /* Faz com que todos os elementos flexíveis tenham o mesmo comprimento, independentemente do seu conteúdo */
+  flex-direction: column; /* Os elementos terão o mesmo comprimento na horizontal */
+  justify-content: center; /* Centraliza os elementos horizontalmente */
+  align-items: center; /* Centraliza os elementos verticalmente */
+}
+
+/* Define estilos para o contêiner de perguntas */
+
+.questions-container {
+  width: 100%; /* Define a largura da div */
+  display: flex; /* Faz com que todos os elementos flexíveis tenham o mesmo comprimento, independentemente do seu conteúdo */
+  flex-direction: column; /* Os elementos terão o mesmo comprimento na horizontal */
+  align-items: center; /* Centraliza os elementos */
+  gap: 24px; /* Adiciona espaçamento entre os botões e as perguntas */
+}
+
+/* Define estilos para o texto da pergunta */
+
+.question {
+  font-size: 24px; /* Define o tamanho da fonte das perguntas */
+  font-weight: bold; /* Torna o texto em negrito */
+  text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Define estilos para o contêiner de respostas */
+
+.answers-container {
+  width: 100%; /* Define a largura da div */
+  display: grid; /* Organiza os elementos em uma grade */
+  grid-template-columns: 1fr 1fr; /* Divide a grade em duas colunas de largura igual */
+  gap: 16px; /* Adiciona espaçamento entre as perguntas */
+}
+
+/* Define estilos para botões de resposta desabilitados */
+
+.answer:disabled {
+  cursor: not-allowed; /* Define o cursor como indisponível (um ícone de proibido) */
+}
+
+/* Define estilos para o botão "Próxima pergunta" */
+
+.next-question {
+  margin-top: 32px; /* Adiciona espaço acima do botão de resposta */
+}
+
+/* Define estilos para todos os botões */
+
+.button {
+  background-color: #57A4AF; /* Define a cor de fundo dos botões */
+  color: #fff; /* Define a cor do texto nos botões como branca */
+  font-size: 16px; /* Define o tamanho do texto nos botões */
+  font-weight: bold; /* Torna o texto dos botões em negrito */
+  border: 0; /* Remove as bordas dos botões */
+  border-radius: 6px; /* Deixa os botões com cantos arredondados */
+  height: 48px; /* Define a altura dos botões */
+  padding: 0 32px; /* Adiciona espaço ao redor do conteúdo dos botões */
+
+  transition: filter 0.1s; /* Adiciona uma transição de 0,1 segundos para a propriedade 'filter' */
+}
+
+/* Define estilos para os botões quando não estão desabilitados e são passados com o mouse */
+
+.button:not(:disabled):hover {
+  filter: brightness(0.8); /* Diminui o brilho dos botões ao passar o mouse (fica mais escuro) */
+}
+
+/* Define estilos para o ícone de alto-falante dentro dos botões */
+
+button i {
+  margin-left: 8px; /* Adiciona espaço entre o texto da alternativa e o ícone de alto-falante */
+  cursor: pointer; /* Define o cursor como uma mãozinha */
+}
+
+/* Define estilos para a mensagem final */
+
+.final-message {
+  font-size: 20px; /* Define o tamanho da fonte da mensagem final */
+  text-align: center; /* Centraliza o texto da mensagem final */
+}
+
+.final-message span {
+  display: block;
+  margin-top: 8px; /* Adiciona espaço na margem superior da mensagem final */
+}
+
+/* Define estilos para a classe "hide" que esconde elementos */
+
+.hide {
+  display: none; /* Esconde os elementos que têm a classe "hide" */
+}
+
+/* Define estilos para respostas corretas */
+
+.correct {
+  background-color: #049b48; /* Define a cor de fundo das respostas corretas */
+}
+
+/* Define estilos para respostas incorretas */
+
+.incorrect {
+  background-color: #a10101; /* Define a cor de fundo das respostas incorretas */
+}
+
+/* Define estilos para o contêiner de respostas */
+
+.answer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* Define estilos para botões de resposta */
+
+.button.answer {
+  font-size: 16px; /* Define o tamanho do texto nas alternativas */
+}
+
+/* Define estilos para o botão de áudio */
+
+.audio-button {
+  font-size: 20px; /* Aumenta o tamanho do ícone de som */
+  cursor: pointer; /* Define o cursor como uma mãozinha */
+  color: white; /* Define a cor do ícone de som, você pode ajustar conforme necessário */
+  text-align: center;
+  margin-left: 8px; /* Adiciona espaço à esquerda do botão de áudio */
+  background-color:  #57A4AF ;
+  border-color:  #438e9a;
+}
+
+.musicaDeFundo { /*criei uma div na parte superior a esquerda*/
+  position: absolute; /*A posição do elemento não depende dos outros*/
+  top: 0;
+  left: 0;
+  background-color: #1b4a9b;
+}
+ .musicaDeFundo button{ /*Estiliza os botões de aúdio*/
+  background-color: #1b4a9b;
+  border-color: #032257;
+  width: 30px;
+  height: 30px;
+ }
+
+ @media(max-width: 450px){
+ body {
+  background-image: url(fundo.gif);/*define imagem de fundo*/
+  background-repeat: no-repeat;/*A imagem não irá se repetir*/
+  background-size:cover ;/*A imagem cobre toda a página*/
+  background-position:center center ;/*Coloca a imagem no centro da página*/
+  color: #fff; /* Define a cor dos elementos de texto como branca */
+  height: 100vh; /* Define a altura da página como 100% da altura da tela */
+  display: flex; /* Faz com que todos os elementos flexíveis tenham o mesmo comprimento, independentemente do seu conteúdo */
+  justify-content: center; /* Centraliza os elementos horizontalmente */
+  align-items: center; /* Centraliza os elementos verticalmente */
+}
+
+ }
